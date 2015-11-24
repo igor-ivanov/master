@@ -69,6 +69,8 @@ PMIX_DECLSPEC bool pmix_value_cmp(pmix_value_t *p, pmix_value_t *p1);
         (b)->bytes_allocated = (s);                     \
         (b)->pack_ptr = ((char*)(b)->base_ptr) + (s);   \
         (b)->unpack_ptr = (b)->base_ptr;                \
+        (d) = NULL;                                     \
+        (s) = 0;                                        \
     } while(0);
 
 #define PMIX_UNLOAD_BUFFER(b, d, s)             \
